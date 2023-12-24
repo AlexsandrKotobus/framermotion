@@ -7,8 +7,8 @@ const Collapsible = (props) => {
         title ='click me',
         children,
     } = props;
-    //стейт 
-    const [isVisible, setVisible] = useState(false);
+    //стейт для отображения состояния видимости
+    const [isVisible, setVisible] = useState(true);
     //функция управления видимостью
     const handelVisibility = () => setVisible(!isVisible);
     return (
@@ -26,11 +26,17 @@ const Collapsible = (props) => {
             {title}
         </div>
         {/* контентная часть, которая будет появляться и исчезать */}
-            <AnimatePresence>{
+            <AnimatePresence initial={false}>{
                 isVisible && (
-                    <motion.div>
+                    <motion.div
+                    initial = {{height: 0}}
+                    animate={{height: 'auto'}}
+                    exit={{height: 0}}
+                    style={{overflow: 'hidden'}}
+                    transition={{duration: 2}}
+                    >
                     <div style = {{
-                        padding: '0.8rem 1.2rem',
+                        padding: '0.8rem 1.2rem', width: 300, border: '1px solid #ddd'
                     }}>                   
                         {children}
                     </div>
