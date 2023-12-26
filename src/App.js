@@ -1,20 +1,17 @@
-import Collapsible from "./components/Collapsible";
+
 import './App.css';
+import Filter from './components/Filter'
+import {data} from './data'; 
+
 
 function App() {
 
+
   return (
     <div className="App">
-      <Collapsible title='Toggle content'>
-      Анимация динамических компонентов в React-приложении <br/>
-      с библиотекой Framer Motion. Используем компонент AnimatePresence и разбираемся с его настройками.
-    <br/>
-      Анимация динамических компонентов в React-приложении <br/>
-      с библиотекой Framer Motion. Используем компонент AnimatePresence и разбираемся с его настройками.
-
-
-
-      </Collapsible>
+      <Filter data={data} />
+      
+  
       
     </div>
   )
