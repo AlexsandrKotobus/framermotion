@@ -42,27 +42,30 @@ const Filter =({data}) =>{
                 />))}
             </div>
             {/* карточки */}
-            <div style={{owerflow: 'hidden', maxWidth: 400}}>
-                <AnimatePresence initial ={false} mode='wait'>
-                    {
-                        cards.map(el => (
-                            <motion.div 
-                            key={el.title}
-                            style={boxStyle}
-                            initial={{opacity: 0}}
-                            animate={{opacity: 1}}
-                            exit={{opacity: 0}}
-                            transition={{duration: 1}}
-                            >
-                                {/* title - см в data */}
-                                {el.title}
-                            </motion.div>
-                        )
+            {/* для красивой анимации добавим  motion. и проп layout*/}
+            <motion.div 
+                layout
+                    style={{owerflow: 'hidden', maxWidth: 400, border: '1px solid #ccc'}}>
+                        <AnimatePresence initial ={false} mode='wait'>
+                            {
+                                cards.map(el => (
+                                    <motion.div 
+                                    key={el.title}
+                                    style={boxStyle}
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    exit={{opacity: 0}}
+                                    transition={{duration: 1}}
+                                    >
+                                        {/* title - см в data */}
+                                        {el.title}
+                                    </motion.div>
+                                )
 
-                        )
-                    }
-                </AnimatePresence>
-            </div>
+                                )
+                            }
+                        </AnimatePresence>
+            </motion.div>
         </div>
     );
 
@@ -74,7 +77,7 @@ export default Filter;
 const boxStyle = {
     float: 'left',
     backgroundColor: '#525c80',
-    conlor: '#ffffff',
+    color: '#ffffff',
     width: '100px',
     lineHeight: '100px',
     textAlign: 'center',
