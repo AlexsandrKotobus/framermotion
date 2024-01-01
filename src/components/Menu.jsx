@@ -71,7 +71,10 @@ function ActiveLine() {
             // layoutId - уникальное фиксированное имя, значение его мб разным, например active
             layoutId='activeItem'
             style={{
-                width: '100%', 
+                // уменьшит на 10px
+                width: 'calc(100% - 10px)', 
+                //сместит влево полоску, чтоб была по центру
+                left: '5px',
                 height: '4px',
                 position: 'absolute', 
                 bottom: '-6px',

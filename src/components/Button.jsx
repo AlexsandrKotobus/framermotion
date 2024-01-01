@@ -6,6 +6,7 @@ const Button = (props) => {
     const {
         text,
         handleClick = Function.prototype,
+        isSelected,
 
     } = props
     return (
@@ -16,7 +17,15 @@ const Button = (props) => {
         onClick={handleClick}
 
         >
-            {text}
+            {isSelected && <BgSelector />}
+            <motion.span
+            animate={{color: isSelected ? '#fff' : '#000'}}
+            style={{position: 'relative'}}
+            >
+                {text}
+            </motion.span>
+        
+           
         </motion.button>
     )
 }
@@ -28,7 +37,28 @@ const btnStyle = {
     outline: 'none',
     padding: '14px 16px',
     backgroundColor: '#f1f1f1',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    position: 'relative',
 
 
+
+}
+
+const BgSelector = () => {
+    return (
+        <motion.div
+        layoutId = 'activeMenuItem'
+        style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            backgroundColor: 'red',
+
+        }}
+        
+        />
+
+    )
 }
