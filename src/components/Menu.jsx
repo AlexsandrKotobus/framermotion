@@ -20,7 +20,7 @@ function Menu(){
             menuData.map((item, index) => (
                 <MenuItem 
                     key={item}
-                    item={item + '!'}
+                    item={item}
                     // статус - выделен или нет
                     isSelected={activeIndex === index}
                     // обработчик
