@@ -36,7 +36,7 @@ const btnStyle = {
     border: '1px solid red',
     outline: 'none',
     padding: '14px 16px',
-    backgroundColor: '#f1f1f1',
+    // backgroundColor: 'transparent',
     cursor: 'pointer',
     position: 'relative',
 

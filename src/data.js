@@ -9,8 +9,6 @@
     {category: 'animals', title: 'dog' },
     {category: 'animals', title: 'tiger' },
     {category: 'animals', title: 'lion' },
-
-
   {category: 'fruits', title: 'Melon'},
   {category: 'fruits', title: 'Kiwy'}, 
   {category: 'fruits', title: 'Banana'},
