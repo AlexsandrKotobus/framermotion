@@ -6,7 +6,8 @@ import {motion, useScroll} from 'framer-motion';
 // import Scroll from './components/Scroll'
 
 // import Movel from './components/Movel'
-import Mbutton from './components/Mbutton';
+// import Mbutton from './components/Mbutton';
+import Gestures from './components/Gestures';
 
   
 
@@ -25,7 +26,8 @@ function App() {
       <Filter data = {data}/>
       <Scroll/> */}
       {/* <Movel/> */}
-      <Mbutton/>
+      {/* <Mbutton/> */}
+      <Gestures/>
     </div>
   )
 }
